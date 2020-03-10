@@ -22,7 +22,7 @@ cd lib  # please change to this directory
 sh make.sh
 ```
 
-`CUDA_PATH` defaults to `/usr/loca/cuda`. If you want to use a CUDA library on different path, change this [line](https://note.youdao.com/) accordingly.
+`CUDA_PATH` defaults to `/usr/loca/cuda`. If you want to use a CUDA library on different path, change this [line](https://github.com/anony899/EFPN-pytorch/blob/e099ccb378f3ed2439542d62178820e2db451b1c/lib/make.sh#L3) in `lib/make.sh` accordingly.
 
 ## Pretrainded Models
 
@@ -33,7 +33,7 @@ Download our trained models from  [GoogleDrive](https://drive.google.com/open?id
 
 ## Inference 
 
-At present, the code only supports **single GPU** inference. You can change the GPU id on [link](https://note.youdao.com/).
+At present, the code only supports **single GPU** inference. You can specify the GPU id on [line](https://github.com/anony899/EFPN-pytorch/blob/e099ccb378f3ed2439542d62178820e2db451b1c/tools/infer_simple.py#L122) in `tools/infer_simple.py` (default set to GPU 0).
 
 To visualize examples of Tsinghua-Tencent 100K, run with:
 
@@ -49,7 +49,9 @@ python tools/infer_simple.py --dataset coco2017 --cfg configs/EFPN_X-101_COCO.ya
 
 and the detection results will be saved in `examples/res_tt100k` and `examples/res_coco`.
 
+## Examples
 
+We provide several detection examples of EFPN in `./examples`. You can also directly view them.
 
 ## Training
 
